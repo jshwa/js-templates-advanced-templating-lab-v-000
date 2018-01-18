@@ -1,5 +1,5 @@
 function init() {
-  document.querySelector('main').innerHTML += document.getElementById('recipe-form-template').innerHTML
+  document.querySelector('main').innerHTML += document.getElementById('recipe-form-template').innerHTML;
   //put any page initialization/handlebars initialization here
 }
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -21,4 +21,5 @@ function createRecipe() {
 
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
   var displayRecipe = recipeTemplate(recipe)
+  document.getElementsByTagName("main")[0].innerHTML += displayRecipe
 }
