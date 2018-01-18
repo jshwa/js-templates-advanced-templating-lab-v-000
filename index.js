@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 function createRecipe() {
   var recipe = {
-    recipeName: document.getElementById("recipeName").value,
+    recipeName: document.getElementById("name").value,
     recipeDesc: document.getElementById("recipeDesc").value,
     ingredients: document.getElementsByName("ingredients")
   }
