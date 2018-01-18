@@ -1,6 +1,5 @@
 function init() {
   document.querySelector('main').innerHTML += document.getElementById('recipe-form-template').innerHTML;
-
   Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML)
 }
 document.addEventListener("DOMContentLoaded", function(event) {
