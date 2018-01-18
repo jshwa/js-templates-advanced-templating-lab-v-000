@@ -23,13 +23,13 @@
     </script>
     <script id="recipe-template" type="text/x-handlebars-template">
       <div id="recipe">
-        <h1>{{name}}</h1>
+        <h1 id="name">{{name}}</h1>
         <a onclick="displayEditForm()">Edit Recipe</a>
         {{>recipeDetailsPartial}}
       </div>
     </script>
     <script id="recipe-details-partial" type="text/x-handlebars-template">
-      <p>{{description}} </p>
+      <p id="description">{{description}} </p>
       {{#each ingredients}}
         {{displayIngredient this}}
       {{/each}}
