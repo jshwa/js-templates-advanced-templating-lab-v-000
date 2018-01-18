@@ -30,8 +30,9 @@
     </script>
     <script id="recipe-details-partial" type="text/x-handlebars-template">
       <p>{{recipeDesc}} </p>
-      {{ingredients[0]}}
-
+      {{#each ingredients}}
+        {{this}}
+      {{/each}}
     </script>
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
     <script src="index.js"></script>
