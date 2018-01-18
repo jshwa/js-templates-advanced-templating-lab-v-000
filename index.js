@@ -29,8 +29,17 @@ function createRecipe() {
 function displayEditForm() {
 
   newForm = Handlebars.compile(document.getElementById('recipe-form-template').innerHTML);
-  document.querySelector('main').innerHTML += newForm({createOrUpdate: "updateRecipe()", name: name});}
+  document.querySelector('main').innerHTML += newForm({createOrUpdate: "updateRecipe()"});
+}
 
 function updateRecipe() {
+  var recipe = {
+    name: document.getElementById("name").value,
+    description: document.getElementById("description").value,
+    ingredients: document.getElementsByName("ingredients")
+  }
 
+  var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
+  var displayRecipe = recipeTemplate(recipe)
+  document.querySelector("main").innerHTML += displayRecipe
 }
