@@ -30,7 +30,7 @@ function displayEditForm() {
   recipe = getRecipe();
     console.log(recipe)
   var newForm = Handlebars.compile(document.getElementById('recipe-form-template').innerHTML);
-  document.querySelector('main').innerHTML += newForm({createOrUpdate: "updateRecipe()", name:recipe[name], description: recipe[desc]});
+  document.querySelector('main').innerHTML += newForm({createOrUpdate: "updateRecipe()", name:recipe[name], description: recipe[description]});
 }
 
 function updateRecipe() {
