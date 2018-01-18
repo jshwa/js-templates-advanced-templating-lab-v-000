@@ -13,7 +13,6 @@ function createRecipe() {
     ingredients: document.getElementsByName("ingredients").value
   }
 
-  debugger
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
   var displayRecipe = recipeTemplate(recipe)
   document.querySelector("main").innerHTML += displayRecipe
