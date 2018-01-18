@@ -28,13 +28,16 @@ function createRecipe() {
 
 function displayEditForm() {
   recipe = getRecipe();
-    console.log(recipe.ingredients)
   var newForm = Handlebars.compile(document.getElementById('recipe-form-template').innerHTML);
   document.querySelector('main').innerHTML += newForm({createOrUpdate: "updateRecipe()", name: recipe.name, description: recipe.description, ingredients: recipe.ingredients});
 }
 
 function updateRecipe() {
-  recipe = getRecipe();
+  var recipe = {
+      name: document.getElementById("name").value,
+      description: document.getElementById("description").value,
+      ingredients: document.getElementsByName("ingredients")
+    }
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
   var displayRecipe = recipeTemplate(recipe)
   document.querySelector("main").innerHTML += displayRecipe
@@ -46,7 +49,7 @@ function getRecipe() {
     description: document.getElementById("recipeDescription").innerHTML,
     ingredients: []
   }
-  let ingred= document.getElementsByName("recipeIng")
+  let ingred = document.getElementsByName("recipeIng")
 
   for (let i=0; i<ingred.length; i++) {
     recipe.ingredients.push(ingred[i].innerHTML)
