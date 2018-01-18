@@ -6,7 +6,7 @@ function init() {
   })
 
   firstForm = Handlebars.compile(document.getElementById('recipe-form-template').innerHTML);
-  document.querySelector('main').innerHTML += firstForm({createOrUpdate: "createRecipe()""});
+  document.querySelector('main').innerHTML += firstForm({createOrUpdate: "createRecipe()"});
 
 }
 
@@ -27,8 +27,8 @@ function createRecipe() {
 }
 
 function displayEditForm() {
-  document.querySelector('main').innerHTML += document.getElementById('recipe-form-partial').innerHTML;
-}
+  newForm = Handlebars.compile(document.getElementById('recipe-form-template').innerHTML);
+  document.querySelector('main').innerHTML += newForm({createOrUpdate: "updateRecipe()"});}
 
 function updateRecipe() {
 
