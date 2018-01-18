@@ -6,7 +6,7 @@ function init() {
   })
 
   var firstForm = Handlebars.compile(document.getElementById('recipe-form-template').innerHTML);
-  document.querySelector('main').innerHTML += firstForm({createOrUpdate: "createRecipe()"});
+  document.querySelector('main').innerHTML = firstForm({createOrUpdate: "createRecipe()"});
 
 }
 
@@ -23,7 +23,7 @@ function createRecipe() {
 
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
   var displayRecipe = recipeTemplate(recipe)
-  document.querySelector("main").innerHTML += displayRecipe
+  document.querySelector("main").innerHTML = displayRecipe
 }
 
 function displayEditForm() {
@@ -40,7 +40,7 @@ function updateRecipe() {
     }
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
   var displayRecipe = recipeTemplate(recipe)
-  document.querySelector("main").innerHTML += displayRecipe
+  document.querySelector("main").innerHTML = displayRecipe
 }
 
 function getRecipe() {
