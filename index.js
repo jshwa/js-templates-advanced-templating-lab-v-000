@@ -12,5 +12,12 @@ function loadIssues() {
 }
 
 function createRecipe() {
-  var recipe = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
+  var recipe = {
+    name: document.getElementById("recipeName").innerHTML;
+    description:
+    ingredients: 
+  }
+  
+  var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
+  var displayRecipe = recipe()
 }
