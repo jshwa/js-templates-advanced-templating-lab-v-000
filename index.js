@@ -13,11 +13,11 @@ function loadIssues() {
 
 function createRecipe() {
   var recipe = {
-    name: document.getElementById("recipeName").innerHTML;
+    name: document.getElementById("recipeName").value;
     description:
-    ingredients: 
+    ingredients:
   }
-  
+
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
   var displayRecipe = recipe()
 }
