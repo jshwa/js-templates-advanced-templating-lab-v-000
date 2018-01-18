@@ -20,3 +20,9 @@ function createRecipe() {
   var displayRecipe = recipeTemplate(recipe)
   document.querySelector("main").innerHTML += displayRecipe
 }
+
+function displayEditForm() {
+  var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
+  var displayRecipe = recipeTemplate(recipe)
+  document.querySelector("main").innerHTML += displayRecipe
+}
