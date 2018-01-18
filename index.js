@@ -15,20 +15,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
 })
 
 function createRecipe() {
-  getRecipe();
+  recipe = getRecipe();
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
   var displayRecipe = recipeTemplate(recipe)
   document.querySelector("main").innerHTML += displayRecipe
 }
 
 function displayEditForm() {
-  getRecipe();
+  recipe = getRecipe();
   var newForm = Handlebars.compile(document.getElementById('recipe-form-template').innerHTML);
   document.querySelector('main').innerHTML += newForm({createOrUpdate: "updateRecipe()"});
 }
 
 function updateRecipe() {
-  getRecipe();
+  recipe = getRecipe();
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
   var displayRecipe = recipeTemplate(recipe)
   document.querySelector("main").innerHTML += displayRecipe
