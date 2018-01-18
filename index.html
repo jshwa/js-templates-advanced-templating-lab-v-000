@@ -13,7 +13,7 @@
       <form onsubmit="{{createOrUpdate}}" id='recipe-form'>
         Name: <input type="textarea" id="name" value="{{name}}"><br>
         Description: <input type="textarea" id="description" value="{{description}}"><br>
-        {{#each ingredients}}
+        {{#each ingredients.innerHTML}}
         Ingredient: <input type="textarea" name="ingredients" value="{{this}}"><br>
         {{else}}
         Ingredient: <input type="textarea" name="ingredients"><br>
