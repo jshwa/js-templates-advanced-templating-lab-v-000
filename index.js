@@ -15,7 +15,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 })
 
 function createRecipe() {
-  recipe = getRecipe();
+  var recipe = {
+    name: document.getElementById("name").value,
+    description: document.getElementById("description").value,
+    ingredients: document.getElementsByName("ingredients")
+  }
+  
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
   var displayRecipe = recipeTemplate(recipe)
   document.querySelector("main").innerHTML += displayRecipe
@@ -37,7 +42,7 @@ function updateRecipe() {
 
 function getRecipe() {
   var recipe = {
-    name: document.getElementById("name").value,
+    name: document.getElementById("name"),
     description: document.getElementById("description").value,
     ingredients: document.getElementsByName("ingredients")
   }
