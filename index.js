@@ -2,7 +2,7 @@ function init() {
   document.querySelector('main').innerHTML += document.getElementById('recipe-form-template').innerHTML;
   Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML);
   Handlebars.registerPartial('recipeFormPartial', document.getElementById('recipe-form-partial').innerHTML);
-  Handlebars.registerHelper('displayIngredient', function (this) {
+  Handlebars.registerHelper('displayIngredient', function(context) {
     this.value;
   })
 }
