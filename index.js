@@ -3,7 +3,7 @@ function init() {
   Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML);
   Handlebars.registerPartial('recipeFormPartial', document.getElementById('recipe-form-partial').innerHTML);
   Handlebars.registerHelper('displayIngredient', function(context) {
-    this.value;
+    context.value;
   })
 }
 
