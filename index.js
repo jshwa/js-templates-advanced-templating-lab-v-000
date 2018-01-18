@@ -20,7 +20,7 @@ function createRecipe() {
     description: document.getElementById("description").value,
     ingredients: document.getElementsByName("ingredients")
   }
-  
+
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
   var displayRecipe = recipeTemplate(recipe)
   document.querySelector("main").innerHTML += displayRecipe
