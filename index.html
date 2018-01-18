@@ -31,7 +31,7 @@
     <script id="recipe-details-partial" type="text/x-handlebars-template">
       <p>{{description}} </p>
       {{#each ingredients}}
-        {{this.value}}
+        {{displayIngredient}}
       {{/each}}
     </script>
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
