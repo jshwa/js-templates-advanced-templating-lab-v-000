@@ -1,5 +1,5 @@
 function init() {
-  document.querySelector('main').innerHTML += document.getElementById('recipe-form-template')
+  document.querySelector('main').innerHTML += document.getElementById('recipe-form-template').innerHTML
   //put any page initialization/handlebars initialization here
 }
 document.addEventListener("DOMContentLoaded", function(event) {
