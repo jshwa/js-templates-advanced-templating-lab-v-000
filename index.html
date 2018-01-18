@@ -21,14 +21,10 @@
         <input type="submit">
       </form>
     </script>
-    <script id="" type="text/x-handlebars-template">
+    <script id="recipe-template" type="text/x-handlebars-template">
       <div id="recipe">
-        <p>{{description}}</p>
-        <ul>
-          {{#each ingredients}}
-          <li>{{name}}</li>
-          {{/each}}
-        </ul>
+        <h1>{{recipeName}}</h1>
+        <a href="#">Edit Recipe</a>
       </div>
     </script>
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
