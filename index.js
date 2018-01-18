@@ -14,7 +14,7 @@ function loadIssues() {
 
 function createRecipe() {
   var recipe = {
-    recipeName: document.getElementById("recipeName").value
+    recipeName: document.getElementById("recipeName").value,
     recipeDesc: document.getElementById("recipeDesc").value
   }
 
