@@ -23,4 +23,9 @@ function createRecipe() {
 
 function displayEditForm() {
   document.querySelector('main').innerHTML += document.getElementById('recipe-form-template').innerHTML;
+  displayRecipe
+}
+
+function updateRecipe() {
+  
 }
