@@ -43,3 +43,12 @@ function updateRecipe() {
   var displayRecipe = recipeTemplate(recipe)
   document.querySelector("main").innerHTML += displayRecipe
 }
+
+function getRecipe() {
+  var recipe = {
+    name: document.getElementById("name").value,
+    description: document.getElementById("description").value,
+    ingredients: document.getElementsByName("ingredients")
+  }
+  return recipe
+}
