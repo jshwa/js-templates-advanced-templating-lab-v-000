@@ -46,6 +46,8 @@ function getRecipe() {
     description: document.getElementById("recipeDescription").innerHTML,
     ingredients: []
   }
+  let ingred: document.getElementsByName("recipeIng")
+  
   for (let i=0; i<ingred.length; i++) {
     recipe.ingredients.push(ingred[i].innerHTML)
   }
