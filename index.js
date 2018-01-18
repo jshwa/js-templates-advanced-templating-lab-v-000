@@ -15,12 +15,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 })
 
 function createRecipe() {
-  var recipe = {
-    name: document.getElementById("name").value,
-    description: document.getElementById("description").value,
-    ingredients: document.getElementsByName("ingredients")
-  }
-
+  getRecipe();
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
   var displayRecipe = recipeTemplate(recipe)
   document.querySelector("main").innerHTML += displayRecipe
@@ -33,12 +28,7 @@ function displayEditForm() {
 }
 
 function updateRecipe() {
-  var recipe = {
-    name: document.getElementById("name").value,
-    description: document.getElementById("description").value,
-    ingredients: document.getElementsByName("ingredients")
-  }
-
+  getRecipe();
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
   var displayRecipe = recipeTemplate(recipe)
   document.querySelector("main").innerHTML += displayRecipe
