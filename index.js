@@ -42,9 +42,9 @@ function updateRecipe() {
 
 function getRecipe() {
   var recipe = {
-    name: document.getElementById("name"),
-    description: document.getElementById("description").value,
-    ingredients: document.getElementsByName("ingredients")
+    name: document.getElementById("recipeName"),
+    description: document.getElementById("recipeDescription").value,
+    ingredients: document.getElementsByName("recipeIng")
   }
   return recipe
 }
