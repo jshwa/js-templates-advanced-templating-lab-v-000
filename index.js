@@ -3,7 +3,7 @@ function init() {
   Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML);
   Handlebars.registerPartial('recipeFormPartial', document.getElementById('recipe-form-partial').innerHTML);
   Handlebars.registerHelper('displayIngredient', function(context) {
-    context.value;
+    return context.value;
   })
 }
 
@@ -24,7 +24,7 @@ function createRecipe() {
 }
 
 function displayEditForm() {
-  document.querySelector('main').innerHTML += document.getElementById('recipe-form-template').innerHTML;
+  document.querySelector('main').innerHTML += document.getElementById('recipe-form-partial').innerHTML;
 }
 
 function updateRecipe() {
