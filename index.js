@@ -15,8 +15,6 @@ function loadIssues() {
 function createRecipe() {
   var recipe = {
     recipeName: document.getElementById("recipeName").value,
-    recipeDesc: document.getElementById("recipeDesc").value,
-    ingredients: document.getElementsByName("ingredients").value
   }
 
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
