@@ -44,7 +44,7 @@ function getRecipe() {
   var recipe = {
     name: document.getElementById("recipeName").innerHTML,
     description: document.getElementById("recipeDescription").innerHTML,
-    ingredients: document.getElementsByName("recipeIng")
+    ingredients: document.getElementsByName("recipeIng").innerHTML
   }
   return recipe
 }
