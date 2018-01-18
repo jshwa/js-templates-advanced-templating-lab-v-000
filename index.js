@@ -5,7 +5,7 @@ function init() {
     return context.value;
   })
 
-  firstForm = Handlebars.compile(document.getElementById('recipe-form-template').innerHTML);
+  var firstForm = Handlebars.compile(document.getElementById('recipe-form-template').innerHTML);
   document.querySelector('main').innerHTML += firstForm({createOrUpdate: "createRecipe()"});
 
 }
