@@ -23,13 +23,13 @@ function createRecipe() {
 
 function displayEditForm() {
   recipe = getRecipe();
+    console.log(recipe)
   var newForm = Handlebars.compile(document.getElementById('recipe-form-template').innerHTML);
-  document.querySelector('main').innerHTML += newForm({createOrUpdate: "updateRecipe()", name: });
+  document.querySelector('main').innerHTML += newForm({createOrUpdate: "updateRecipe()"});
 }
 
 function updateRecipe() {
   recipe = getRecipe();
-  console.log(recipe)
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
   var displayRecipe = recipeTemplate(recipe)
   document.querySelector("main").innerHTML += displayRecipe
