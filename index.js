@@ -21,5 +21,5 @@ function createRecipe() {
 
   var recipeTemplate = Handlebars.compile(document.getElementById("recipe-template").innerHTML);
   var displayRecipe = recipeTemplate(recipe)
-  document.getElementsByTagName("main")[0].innerHTML += displayRecipe
+  document.getElementsByTagName("main").innerHTML += displayRecipe
 }
