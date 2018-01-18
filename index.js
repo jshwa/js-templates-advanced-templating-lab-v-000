@@ -22,7 +22,7 @@ function createRecipe() {
 }
 
 function displayEditForm() {
-
+  getRecipe();
   var newForm = Handlebars.compile(document.getElementById('recipe-form-template').innerHTML);
   document.querySelector('main').innerHTML += newForm({createOrUpdate: "updateRecipe()"});
 }
